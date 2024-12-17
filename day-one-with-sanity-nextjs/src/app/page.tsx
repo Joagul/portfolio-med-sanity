@@ -47,18 +47,18 @@ export default async function IndexPage() {
             >
               {event?.name}
             </Link>
-            <p className="text-gray-500 mb-2">
+            <div className="text-gray-500 mb-2">
             {event.short ? (
               <PortableText value={event.short} />
             ) : (
               "No short description available."
             )}
-          </p>
+          </div>
 
             {event?.date && (
-              <p className="text-gray-400 text-sm">
+              <div className="text-gray-400 text-sm">
                 {new Date(event.date).toLocaleDateString()}
-              </p>
+              </div>
             )}
           </li>
         ))}
